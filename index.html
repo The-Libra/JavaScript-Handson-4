@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays in JavaScript</title>
+</head>
+<body>
+    <h1>Arrays in JavaScript (please go through codes., here they are not getting displayed properly.)</h1>
+    <hr>
+    <h2>1. Find the Product.</h2>
+    <fieldset>
+        <pre>
+        const Find_Prod = (array, N) => 
+        {
+            let prod=1;
+            for(let i=0; i<N; i++){
+            prod*=array[i];
+            }
+            return prod;
+        };
+        </pre>
+    </fieldset>
+
+
+    <h2>2. Find the Sum.</h2>
+    <fieldset>
+        <pre>
+            const Find_Sum = (array, N) => 
+            {
+              let sum=0;
+              for(let i=0; i<array.length; i++){
+                sum+=array[i];
+              }
+              return sum;
+            };
+        </pre>
+    </fieldset>
+
+
+    <h2>3. Count Occurrences.</h2>
+    <fieldset>
+        <pre>
+            const findCount = (N, K, Arr) => 
+            {
+              let count=0;
+              for(let i=0; i<N; i++){
+                if(Arr[i]===K)
+                count++;
+              }
+              return count;
+            };
+        </pre>
+    </fieldset>
+
+
+    <h2>4. Even Odd.</h2>
+    <fieldset>
+        <pre>
+            const findEvenOdd = (N, Arr) => 
+            {
+              let sumOfEven=0; let sumOfOdd=0;
+              for(let i=0; i<N; i++){
+                if(Arr[i]%2===0)
+                sumOfEven+=Arr[i];
+                else 
+                sumOfOdd+=Arr[i];
+              }
+                let B=[sumOfEven, sumOfOdd];
+                return B;
+            };
+             
+             
+        </pre>
+    </fieldset>
+
+
+    <h2>5. Find whether the number is present or not.</h2>
+    <fieldset>
+        <pre>
+            const Find_Num = (array,N,M) => 
+            {
+              let flag=0;
+              for(let i=0; i<N; i++){
+                if(array[i]===M)
+                flag++;
+              }
+              if(flag!==0)
+              return ("YES");
+              else 
+              return ("NO");
+            };
+        </pre>
+    </fieldset>
+
+
+    <h2>6. Higher Age</h2>
+    <fieldset>
+        <pre>
+            const highAge = (N, Arr) => 
+            {
+            let B=[];
+            for(let i=0; i<N; i++){
+                if(Arr[i]>=18)
+                B.push(Arr[i]);
+            }
+            return B;
+            };
+        </pre>
+    </fieldset>
+
+
+    <h2>7. Increment the Array Elements</h2>
+    <fieldset>
+        <pre>
+            const Inc_Arr = (array,N) => 
+            {
+            let arr;
+            for(let i=0;i<array.length;i++){
+            arr=array[i]+1;
+            console.log(arr);
+                
+                }
+            };      
+        </pre>
+    </fieldset>
+
+
+    <h2>8. Pass or Fail</h2>
+    <fieldset>
+        <pre>
+            const isAllPass = (N, Arr) => 
+            {
+            let flag=0;
+            for(let i=0; i<N; i++){
+            if(Arr[i]>=32)
+            continue;
+            else
+            flag++;
+            return "NO";
+            }  
+            if(flag===0)
+            return "YES";
+            };
+        </pre>
+    </fieldset>
+
+
+    <h2>9. Unique Color Shirt.</h2>
+    <fieldset>
+        <h3>I need help with this question, I want to understand this better to solve more alike questions</h3>
+        <pre>
+            function Unique_Shirts (arr,N) {
+            let count=0;
+            let check;
+            for(let i=0; i<N; i++){
+            check=false;
+            for(let j=0;j<N;j++){
+            if(i!=j && arr[i]===arr[j]){
+            check=true;
+            break;
+            }
+            }
+            if(check===false){
+            count++;
+            }
+            }
+            return count;
+
+            }
+             
+    </pre>
+    </fieldset>
+    <h2>10. Min and Max.</h2>
+    <fieldset>
+        <pre>
+            function arrayMin(arr) {
+                let min=arr[0];
+                let size=arr.length ;
+               for(let i=0; i<size; i++)
+               {
+                 if(arr[i]<min)
+                 min=arr[i];
+               }
+               return min;
+             
+             }
+             
+             function arrayMax(arr) {
+              let max=arr[0];
+              let size=arr.length ;
+               for(let i=0; i<size; i++)
+               {
+                 if(arr[i]>max)
+                 max=arr[i];
+               }
+               return max;
+             
+             }
+             
+    </pre>
+    </fieldset>
+    <h2>11. Birthday Game.</h2>
+    <fieldset>
+        <h3>I need help in this question, I don't get the required output, although I have tried</h3>
+        <pre>
+             
+        function Birthday_Game(arr,D ,M) {
+        let count=0;
+          let sum=0;
+          for(let i=0;i<arr.length-M;i++){
+            sum=0;
+            for(let j=i;j<M+1;j++){
+              sum=sum+arr[j];
+            }
+            
+            if(sum==D){
+              count++;
+            }
+          
+          return count;
+        }
+  }
+  
+        </pre>
+    </fieldset>
+    
+
+</body>
+</html>
